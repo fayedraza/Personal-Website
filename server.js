@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const sgMail = require('@sendgrid/mail')
-sgMail.setApiKey('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')
+sgMail.setApiKey('')
 
 
 
@@ -22,8 +22,8 @@ app.get("/sendemail", function(req,res){
   const {subject, message, email, name } =  req.query;
 
   const msg = {
-    to: 'fayedrazacs@gmail.com', 
-    from: 'fayedrazacs@gmail.com', 
+    to: '', 
+    from: '', 
     subject: name + " - " + subject,
     text: message + "\n\n Email: " + email
   }
